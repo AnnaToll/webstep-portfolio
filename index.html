@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annas Portfolio</title>
+    <link rel="icon" type="image" href="img/favicon.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <script src="js/preload.js"> </script>
+
+    <!-- --------------- HEADER --------------- -->
+
+    <header>
+        <a href="#">
+            <img src="img/logo.png" alt="handwritten logotype with the text Anna T">
+        </a>
+        <nav>
+            <i class="bi bi-list"></i>
+            <ul>
+                <li id="home-button" class="selected">
+                    <a href="#">Home</a>
+                </li>
+                <!-- <li id="contact-button">
+                    <a href="#">Contact</a>
+                </li> -->
+                <li id="about-button">
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#main-portfolio" id="portfolio-button">Portfolio</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- --------------- BTN SCROLL DOWN --------------- -->
+    
+    <a class="btn-scroll-down" class="scrolled-down" href="#main-portfolio">
+        <i class="bi bi-arrow-down-short"></i>
+        <div class="gradient"></div>
+    </a>
+    
+    <!-- --------------- MAIN CONTAINER --------------- -->
+
+    
+    <div class="container-all">
+        <main id="main">
+            
+            <!-- --------------- MAIN --------------- -->
+            
+            <div id="main-home-container">
+                <img src="img/sitting-window-2.png" id="portrait-img" alt="stort-portratt">
+                <div>
+                    <h1>Portfolio</h1>
+                    <p>
+                        Welcome to my portfolio! I am a Front-End Developer studying Computer Science for Web programming at Harvard and Front-End Development at Jensen in Sweden. Most of my digital projects has been done working with React, Node.js, Python, Typescript and Javascript, but I have also worked with C, Redux, different databases, etc. Before discovering how fun and interesting programming is, I spent many years working as a Graphic Designer.
+                    </p> 
+                    <p>
+                        I made this portfolio page a couple of months into first learning about HTML, CSS and Javascript. Feel free to look around and browse through my projects :) If you want to get in touch, I would love hearing from you!
+                    </p>                                   
+                </div>
+                
+            </div>
+            
+            <!-- --------------- PORTFOLIO --------------- -->
+                                
+            <div id="main-portfolio">
+                <div id="filtratePortfolioBtnContainer">
+                    <button>React</button>
+                    <button>React Native</button>
+                    <button>Next</button>
+                    <button>Node.js</button>
+                    <button>Javascript</button>
+                    <button>Typescript</button>
+                    <button>HTML / CSS</button>
+                    <button>Design</button>
+                </div>
+                <section id="portfolio-objects-container">
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/one-source.jpg" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>One source - School project</h3>
+                            <img src="img/one-source-2.jpg" alt="random">
+                            <img src="img/one-source-3.jpg" alt="random">
+                            <p>One Source started of as a group project, but since I have a tendancy to alway want to learn more, I continued to develop the app on my own. I found it to be an excellent opportunity to dig deeper in React, and learning more about other aspects of developing I was curious about.</p>
+                                <p><strong>About</strong></p>
+                                <ul>
+                                    <li>Built with React, Node.js/Express, MongoDB and is hosted on Heroku.</li>
+                                    <li>Live support chat.</li>
+                                    <li>JWT authentication.</li>
+                                    <li>Admin pages with protected routes.</li>
+                                    <li>Used most of the React Hooks.</li>
+                                    <li>CI/CD Pipeline (github actions).</li>
+                                    <li>Tests (Unit tests, integration tests, end-to-end tests).</li>
+                                </ul>
+                            <a href="https://one-source-app.herokuapp.com/">Link to app</a>
+                            <a href="https://github.com/AnnaToll/one-source-app">Link to app repo</a>
+                            <a href="https://github.com/AnnaToll/one-source-server">Link to server repo</a>
+                            <div class="tags">React,Node.js,Javascript,HTML / CSS,Design</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/star-wars.jpg" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>Star Wars app - School project</h3>
+                            <img src="img/star-wars.jpg" alt="random">
+                            <p>An app built with React active.</p>
+                                <p><strong>About</strong></p>
+                                <ul>
+                                    <li>Written with Typescript.</li>
+                                    <li>Allows you to take pictures with phone and display in app.</li>
+                                    <li>Allows you to browse media library and display in app.</li>
+                                    <li>Has a live search functionality.</li>
+                                    <li>Uses Redux.</li>
+                                    <li>Uses Async Storage.</li>
+                                </ul>
+                            <a href="https://github.com/AnnaToll/react-native-redux">Link to github repo</a>
+                            <div class="tags">React Native,React,Typescript</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/tequila-sunrise.jpg" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>Shopping cart - School assignment</h3>
+                            <img src="img/tequila-sunrise.jpg" alt="random">
+                            <p>A web shop built with Next.js, using Redux and MongoDB. This was a group project, and I have listed my contributions below.</p>
+                                <p><strong>My contributions</strong></p>
+                                <ul>
+                                    <li>Creating the shopping Cart.</li>
+                                    <li>Creating the base structure of the webshop.</li>
+                                    <li>Implementing Redux.</li>
+                                </ul>
+                                <a>Link to github repo is shared on request</a>
+                            <div class="tags">Next,React,Node.js,Design,HTML / CSS,Javascript</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/to-do-list.png" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>Listfunktion - Skoluppgift</h3>
+                            <img src="img/to-do-list.png" alt="random">
+                            <p> En att-göra-lista med bland annat drag-and-drop skapad med Vanilla Javascript. Mitt mål var en välfungerade listfunktion som känns intuitiv att använda.</p>
+                                <p><strong>Funktioner</strong></p>
+                                <ul>
+                                    <li>Drag-and-drop.</li>
+                                    <li>Möjlighet till att skapa så många underlistor du vill.</li>
+                                    <li>Spara-knappen aktiveras av enter eller klick utanför inputfältet.</li>
+                                    <li>När föräldern ckeckas i, så bockas alla barn också av.</li>
+                                    <li>Minne av vilka barn som varit i-checkade, om du checkar i och ur en förälder.</li>
+                                    <li>Spara genom att trycka på spara, enter eller utanför textfältet.</li>
+                                </ul>
+                            <a href="https://annatoll.github.io/toDoList-dragDrop-vanillaJS/">Länk till sidan</a>
+                            <a href="https://github.com/AnnaToll/toDoList-dragDrop-vanillaJS">Länk till Github-repo</a>
+                            <div class="tags">Javascript</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/fashion.png" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>Fashion for Paws - Skoluppgift</h3>
+                            <img src="img/fashion.png" alt="random">
+                            <p>En gruppuppgift där alla fick skapa en varsin sida till en gemensam webbplats. Headern och footern gjorde vi tillsammans, och länken nedan går till den sida jag gjorde. Designen är till stor del lånad från andra sidor, men jag har skrivit all HTML och CSS.</p>
+                            <a href="https://annatoll.github.io/FFP---about/about.html" target="_blank">Till sidan</a>
+                            <a href="https://github.com/AnnaToll/FFP---about" target="_blank">Github-repo</a>
+                            <div class="tags">HTML / CSS</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/art-search-2.png" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>Browse art - Skoluppgift</h3>
+                            <img src="img/art-search-2.png" alt="random" class="img-shadow">
+                            <p>En sökfunktion (livesök) som hämtar hem data från ett API med konstverk.</p>
+                            <a href="https://annatoll.github.io/api_school_assignment" target="_blank">Till sidan</a>
+                            <a href="https://github.com/AnnaToll/api_school_assignment" target="_blank">Github-repo</a>
+                            <div class="tags">Javascript, HTML / CSS</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/BAX.png" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>Hemsida design - Björn Axén</h3>
+                            <img src="img/BAX.png" alt="random">
+                            <p>Design till Björn Axéns gamla hemsida.</p>
+                            <div class="tags">Design</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/Portfolio_Anna_Toll3.jpg" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>jubileumslogga - Björn Axén</h3>
+                            <img src="img/Portfolio_Anna_Toll3.jpg" alt="random" class="img-shadow">
+                            <p>Logga till Björn Axéns 50-års jubileum.</p>
+                            <div class="tags">Design</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/advanced-summer-dance.jpg" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>Summer dance - Danshuset</h3>
+                            <img src="img/advanced-summer-dance.jpg" alt="random">
+                            <p>Informationsblad om kurser under sommaren för Danshusets elever som dansar på avancerad nivå.</p>
+                            <div class="tags">Design</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/gant-rugger-2.jpg" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>Arbete med GANT, Tiger of Sweden och Björn Axén</h3>
+                            <img src="img/gant-rugger-2.jpg" alt="random">
+                            <p>Denna bild får representera alla de uppdrag jag arbetade med som AD-assistent, där jag inte var kreativt ansvarig med ändå bidrog till det kreativa arbetet med formgivning, skissande och idéer.</p>
+                            <div class="tags">Design</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/Portfolio_Anna_Toll9.jpg" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>Broschyr - Danshuset</h3>
+                            <img src="img/Portfolio_Anna_Toll9.jpg" alt="random" class="img-shadow">
+                            <p>En broschyr för företag om Danshuset.</p>
+                            <div class="tags">Design</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/provdans.jpg" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>Flyers - Danshuset</h3>
+                            <img src="img/provdans.jpg" alt="random">
+                            <p>Flyers för att uppmuntra fler att komma och provdansa.</p>
+                            <div class="tags">Design</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/ppe.jpg" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>Logga - Danshuset</h3>
+                            <img src="img/ppe.jpg" alt="random" class="img-shadow">
+                            <p>Logotyp för Danshusets förberedande utbildning P.P.E.</p>
+                            <div class="tags">Design</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/Portfolio_Anna_Toll6.jpg" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>Flaggor - Danshuset</h3>
+                            <img src="img/Portfolio_Anna_Toll6.jpg" alt="random">
+                            <p>Flaggor till dansshower och events.</p>
+                            <div class="tags">Design</div>
+                        </div>
+                    </section>
+                    <section class="square-img-container">
+                        <div>
+                            <img src="img/vattenflaskor.jpg" alt="random">
+                        </div>
+                        <div class="shows-when-clicked">
+                            <h3>Vattenflaskor - Danshuset</h3>
+                            <img src="img/vattenflaskor.jpg" alt="random">
+                            <p>Vattenflaskor i olika färger med Danshusets logga.</p>
+                            <div class="tags">Design</div>
+                        </div>
+                    </section>
+                    
+                </section>
+
+            </div>
+
+        </main>                
+                            
+        <!-- --------------- SIDEBAR --------------- -->
+
+        <section id="close-cv-btn">
+            <section>
+                <i class="bi bi-x-lg"></i>
+                <p id="headline-merits">summary</p>
+            </section>
+            <i class="bi bi-phone"></i>
+        </section>
+        <aside>
+            <div id="container-merits">
+                <div>
+                    <div class="bullet"></div>
+                    <div class="plus">+</div>
+                    <section class="wrapper-merits-items">
+                        <h5>Education</h5>
+                        <p>
+                            Front-end developer,
+                            Computer Science for Web programming &
+                            Graphic Designer.
+                        </p>
+                    </section>
+                </div>
+                <div>
+                    <div class="bullet"></div>
+                    <div class="plus">+</div>
+                    <section class="wrapper-merits-items">
+                        <h5>Work</h5>
+                        <p>Front-end developer, 
+                        Assistant Art Director,
+                        Graphic Designer &
+                        Web Designer.</p>
+                    </section>
+                </div>
+                <div>
+                    <div class="bullet"></div>
+                    <div class="plus">+</div>
+                    <a href="#" class="wrapper-merits-items">
+                        <h5>Languages</h5>
+                        <p>React, React Native, Next, Node.js, Vanilla Javascript, Typescript, C, Python. </p>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        
+    </div>
+    <div id="hidden-elements-container">
+        <div>
+            <h3>Utbildning</h3>
+            <p>
+                Just nu utbildar jag mig till Frontend-utvecklare på JENSENs yrkeshögskola (examen sommaren 2023). Vi kommer starta våra praktikperioder under hösten 2022.
+            </p>
+            <p>    
+                2010 - 2011 utbildade jag mig inom Grafisk Formgivning på Runö Folkhögskola.
+            </p>
+        </div>
+        <div>
+            <h3>Arbete</h3>
+            <p>
+                Jag har jobbat med grafisk formgivning sedan 2008 i yrkesroller som bl.a. AD-assistent och grafisk formgivare. Under dessa år har jag jobbat på reklambyråer med kunder som GANT, Tiger of Sweden och Björn Axén. Jag har även jobbat länge som formgivare på Danshuset (med sex dansskolor i Stockholms-området).
+            </p>
+            <p>
+                Innan nuvarande utbildning till Frontend-utvecklare utförde jag även lite enklare uppdrag inom HTML och CSS.
+            </p>
+        </div>
+        <div>
+            <h3>Just nu</h3>
+            <p>
+                Jag studerar till Frontend-utvecklare på JENSENs yrkeshögskola och jobbar samtidigt lite extra som formgivare på Danshuset.
+            </p>
+            <p2>
+                Det roligaste just nu är att få möjlighet att utforska och experimentera med olika metoder och funktionaliteter inom Javascript. Att testa språkets (och sina) gränser, och se vad som är möjligt att skapa.
+            </p2>
+        </div>
+        <div id="home-content">
+            <h1>Portfolio</h1>
+            <p>
+                Welcome to my portfolio! I am a Front-End Developer studying Computer Science for Web programming at Harvard and Front-End Development at Jensen in Sweden. Most of my digital projects has been done working with React, Node.js, Python, Typescript and Javascript, but I have also worked with C, Redux, different databases, etc. Before discovering how fun and interesting programming is, I spent many years working as a Graphic Designer.
+            </p> 
+            <p>
+                I made this portfolio page a couple of months into first learning about HTML, CSS and Javascript. Feel free to look around and browse through my projects :) If you want to get in touch, I would love hearing from you!
+            </p>                                   
+        </div>
+        <div id="about-content">
+            <h1>About</h1>
+            <p>
+                I spend most of my free time with my three-year old daughter and partner. Other important parts of my life are meeting friends, preferably over a nice meal or a steaming cup of coffee. I have always enjoyed beeing physically active, running or taking dance classes, but these days I usually settle with some light yoga.
+            </p> 
+            <p>     
+                When working I like learning new skills, and improving on old ones. I love creating effective and well designed solutions to problems, and to dig in and come up with new ways to overcome existing issues. And finally, I value having good relationships with co-workers and customers in the work place.
+            </p>                                   
+        </div>
+        <!-- <div id="contact-content">
+            <h1>Contact</h1>
+            <p>
+                Feel free to get in touch if you have any questions, or just want to say hi :)  
+            </p>                                  
+            <address>
+                <div>
+                    <i class="bi bi-envelope"></i>
+                    <div>
+                        <p>+46 70 310 13 43</p>
+                        <p>anna.toll@webstep.se</p>
+                    </div>
+                </div>
+                <div>
+                    <i class="bi bi-github"></i>
+                    <a href="https://github.com/AnnaToll" target="_blank">Github</a>
+                </div>
+                <div>
+                    <i class="bi bi-linkedin"></i>
+                    <a href="https://linkedin.com/in/anna-toll-130a95223" target="_blank">LinkedIn</a>
+                </div>
+            </address>                                   
+        </div> -->
+    </div>
+    <script src="js/main.js"> </script>
+
+</body>
+</html>

@@ -1,0 +1,749 @@
+/* --------------- GENERAL SETTINGS --------------- */
+
+html {
+    scroll-behavior: smooth;
+  }
+
+:root {
+    --grey-color-aside: #cecccc;
+    --bullet-size: 9px;
+    --aside-width: 238px;
+    --aside-width-closed: 40px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::before, 
+*::after  {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body, a, li  {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    color: rgb(32, 32, 32);
+    text-decoration: none;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* --------------- HEADLINES, PARAGRAPHS, LINKS --------------- */
+
+
+h1, h2, h3, h5 {
+    font-family: 'Assistant', sans-serif;
+}
+
+h1 {
+    font-size: 56px;
+    margin-bottom: 1.9vh;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+h3 {
+    margin-bottom: 3vh;
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 12.5px;
+    margin-bottom: 1.4vh;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+    color: rgb(78, 78, 78);
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+p + p {
+    margin-top: 18px;
+}
+
+a:hover,
+a:hover h5,
+a:hover p {
+    font-weight: bolder;
+}
+
+a:hover h5,
+a:hover p {
+    color: rgb(78, 78, 78);
+}
+
+/* --------------- REST OF PAGE --------------- */
+
+.container-all {
+    position: relative;
+    padding-right: var(--aside-width);
+    max-width: 100vw;
+    transition: padding 350ms linear;
+}
+
+.menystangd .container-all {
+    padding-right: var(--aside-width-closed);
+    transition: padding 350ms linear;
+}
+
+.darken-background-fullwidth {
+    display: none;
+    position: fixed;
+    top: 0;
+    place-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100%;
+}
+
+#hidden-elements-container {
+    display: none;
+}
+
+/* --------------- HEADER --------------- */
+
+
+header {
+    position: absolute;
+    top: 5vh;
+    left: 3.2vw;
+/*     display: grid;
+    grid-template: auto / minmax(119.3px, 7.7vw); */
+    min-width: 119.3px;
+    max-width: 7.7vw;
+    /* row-gap: 3.4vh; */
+    z-index: 10;
+}
+
+header > a {
+    display: block;
+    margin-bottom: 3.4vh;
+}
+
+nav ul li a {
+    font-family: 'Assistant', sans-serif;
+    display: block;
+    font-size: 14px;
+    height: 29.5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.selected {
+    font-weight: bolder;
+    color: rgb(78, 78, 78);
+}
+
+.bi-list {
+    display: none;
+    cursor: pointer;
+}
+
+
+/* --------------- MAIN --------------- */
+
+#main-home-container {
+    position: relative;
+    display: grid;
+    min-height: 100vh;
+    background-image: url("../img/white_wall.png");
+    place-items: center;
+    padding: 10vw;
+}
+
+#portrait-img {
+    position: absolute;
+    object-fit: cover;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+}
+
+#main-home-container > div {
+    position: relative;
+    top: -6vh;
+    right: -3vw;
+    max-width: 510px;
+}
+
+#main-home-container p {
+    line-height: 19.5px;
+    font-weight: 300;
+}
+
+address {
+    margin-top: 6.5vh;
+    display: flex;
+    column-gap: 36px;
+    row-gap: 1.3vh;
+    flex-wrap: wrap;
+    padding: 4vh 0;
+    border-top: 1px solid rgb(223, 223, 223);
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+address .bi {
+    font-size: 23px;
+}
+
+address > div {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+address > div > div > p + p {
+    margin-top: 2px;
+}
+
+/* --------------- BTN SCROLL DOWN --------------- */
+
+.btn-scroll-down {
+    display: grid;
+    position: fixed;
+    left: 2.5vw;
+    bottom: 5vh;
+    place-content: center;
+    width: 60px;
+    height: 60px;
+    font-size: 42px;
+    color: white;
+    background-color: rgb(140, 173, 153);
+    border-radius: 50%;
+    animation: bouncing-arrow 750ms infinite;
+    transition: color 150ms;
+    z-index: 1;
+}
+
+.btn-scroll-down:hover {
+    color: rgba(13, 15, 20, 0.4);
+    transition: color 150ms;
+}
+
+.btn-scroll-down > div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: linear-gradient(-30deg, #623AA2, #F97794);
+    opacity: 1;
+    transition: opacity 400ms;
+    z-index: 2;
+
+}
+
+.bi-arrow-down-short {
+    position: relative;
+    z-index: 3;
+}
+
+@keyframes bouncing-arrow {
+    0%   
+    {transform: translateY(0%);}
+    50%
+    {transform: translateY(5%);}
+    100% 
+    {transform: translateY(0%);}
+  }
+
+  .scrolled-down > div {
+      opacity: 0;
+      transition: opacity 400ms;
+  }
+
+  .scrolled-down .bi-arrow-down-short::before {
+    content: "\f145";
+}
+
+
+  /* --------------- SIDEBAR --------------- */
+
+aside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: var(--aside-width);
+    padding: 3.4vh calc(20px + 1vw);
+    transition: right 350ms linear;
+    background-color: white;
+    z-index: 13;
+}
+
+.menystangd aside {
+    right: calc(var(--aside-width) - (var(--aside-width) * 2));
+}
+
+#close-cv-btn {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.55em 0;
+    width: var(--aside-width-closed);
+    z-index: 16;
+}
+
+.menystangd #close-cv-btn {
+    background-color: white;
+}
+
+#close-cv-btn .bi-x-lg {
+    display: block;
+    position: relative;
+    font-size: 14px;
+    color: rgb(197, 197, 197);
+    transition: transform 350ms linear;
+}
+
+.menystangd #close-cv-btn .bi-x-lg {
+    transform: rotate(-45deg);
+    transition: transform 350ms linear;
+}
+
+#headline-merits {
+    position: absolute;
+    top: 69px;
+    right: -8px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: rgb(160, 160, 160);
+    font-weight: 300;
+    font-size: 11.5px;
+    transform: rotate(90deg);
+}
+
+#close-cv-btn > section {
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    cursor: pointer;
+}
+
+#close-cv-btn .bi-phone {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    color: rgb(197, 197, 197);
+    font-size: 19.5px;
+    cursor: pointer;
+}
+
+.copy-to-clipboard-message {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    z-index: 25;
+    padding: 0.6em 1em;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 5px;
+    color: rgb(150, 150, 150);
+}
+
+aside {
+    display: grid;
+    align-content: center;
+    height: 100vh;
+}
+
+#container-merits {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -3vh;
+    border-left: 2px solid var(--grey-color-aside);
+    row-gap: 8.7vh;
+    padding: 6vh 0;
+}
+
+#container-merits > div {
+    position: relative;
+    display: flex;
+    left: -5.5px;
+    column-gap: calc(15px + 1.2vw);
+    cursor: pointer;
+}
+
+
+.merits-active h5,
+.merits-active p,
+#container-merits > div:hover h5,
+#container-merits > div:hover p {
+    font-weight: bolder;
+    color: rgb(78, 78, 78);
+}
+
+.bullet {
+    position: relative;
+    top: 3px;
+    background-color: white;
+    border-radius: 50%;
+    height: var(--bullet-size);
+    flex: 0 0 var(--bullet-size);
+    border: 2.5px solid var(--grey-color-aside);
+    transition: border 300ms ease-in, transform 300ms ease-in;
+}
+
+.merits-active .bullet,
+#container-merits > div:hover .bullet {
+    border: 1px solid var(--grey-color-aside);
+    transform: scale(2.8);
+}
+
+.plus {
+    position: absolute;
+    font-size: 24px;
+    font-weight: 100;    
+    top: -9px;
+    left: -3px;
+    color: white;
+    transform: scale(0);
+    transition: all 350ms;
+}
+
+.merits-active .plus,
+#container-merits > div:hover .plus {
+    transform: scale(1);
+    color: rgb(68, 68, 68);
+}
+
+aside p {
+    font-size: 11px;
+    color: rgb(85, 85, 85);
+    font-weight: 200;
+    line-height: 15px;
+}
+
+.merits-popup-container {
+    position: relative;
+    background-color: white;
+    max-width: 620px;
+    padding: 10vh 5vw;
+    top: -4vh;
+}
+
+/* --------------- PORTFOLIO --------------- */
+
+
+#main-portfolio {
+    background-color: rgb(185, 212, 185);
+    min-height: 100vh;
+    padding: 8.5vh 10.5vw;
+}
+
+#portfolio-objects-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 4%;
+    row-gap: 5.5vh;
+}
+
+#filtratePortfolioBtnContainer {
+    margin-bottom: calc(4vh - 8px);
+}
+
+#filtratePortfolioBtnContainer button {
+    font-family: 'Assistant', sans-serif;
+    padding: 0.16em 0.64em;
+    background-color: rgb(238, 238, 238);
+    border: 0.5px solid rgb(179, 179, 179);
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+#filtratePortfolioBtnContainer button.selected-filter-btn-portfolio {
+    background-color: rgb(202, 202, 202);
+}
+
+button.selected-filter-btn-portfolio .bi-x {
+    position: relative;
+    top: 1px;
+    left: 1.5px;
+}
+
+.square-img-container {
+    cursor: pointer;
+}
+
+.square-img-container > div:first-of-type {
+    position: relative;
+    padding-top: 72%;
+}
+
+.square-img-container div:first-of-type > img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 7px solid rgb(250, 250, 250);
+    transition: transform 250ms;
+}
+
+.square-img-container div:first-of-type > img:hover {
+    transform: scale(1.06);
+    z-index: 19;
+    transition: transform 250ms;
+}
+
+.shows-when-clicked {
+    display: none;
+}
+
+.portfolio-object-popup-content ul {
+    position: relative;
+    top: -3px;
+    left: 25px;
+    margin-bottom: 25px;
+}
+
+.portfolio-object-popup-content li {
+    list-style: disc outside none;
+}
+
+.tags {
+    display: none;
+}
+
+.portfolio-object-popup-content {
+    position: relative;
+    overflow: auto;
+    height: 100%;
+    max-width: 1050px;
+    height: 94vh;
+    background-color: white;
+    padding: 8vh 140px;
+    margin: 0 2.5vw;
+}
+
+.arrow-left-portfolio-object,
+.arrow-right-portfolio-object {
+    position: fixed;
+    top: 48%;
+    font-size: 39px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.portfolio-object-popup-content .bi-x-lg {
+    position: fixed;
+    top: 5.5vh;
+    font-size: 15px;
+    color: grey;
+    cursor: pointer;
+}
+
+.portfolio-object-popup-content h3 {
+    margin-bottom: 30px;
+}
+
+.portfolio-object-popup-content img {
+    margin-bottom: 28px;
+}
+
+.img-shadow {
+    box-shadow: 2px 2px 5px 1px rgb(230, 230, 230);
+}
+
+.portfolio-object-popup-content p {
+    margin-bottom: 16px;
+    font-weight: 200px;
+    color: grey;
+}
+
+.portfolio-object-popup-content a {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+
+/* --------------- MEDIA QUERIES --------------- */
+
+
+@media screen and (max-width: 1100px) {
+    
+    header {
+        left: 6vmin;
+    }
+
+    address > div {
+        width: 100%;
+    }
+
+    .btn-scroll-down {
+        left: 6vmin;
+    }
+
+    #portfolio-objects-container {
+        row-gap: 5vh;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio-object-popup-content {
+        padding: 10vh 12vw;
+    }
+
+  }
+
+
+  @media screen and (max-width: 850px) {
+
+    header {
+        left: 7vmin;
+    }
+
+    .btn-scroll-down {
+        left: 6.5vmin;
+        bottom: 7vmin;
+    }
+
+    .bi-list {
+        position: relative;
+        top: -26px;
+        display: inline;
+        color: rgb(102, 102, 102);
+        font-size: 34.5px;
+    }
+    
+    nav > ul {
+        display: none;
+    }
+
+    .hamburger-menu-clicked * {
+        position: relative;
+        z-index: 11;
+    }
+
+    .hamburger-menu-clicked nav {
+        top: -40px;
+    }
+
+    .hamburger-menu-clicked ul {
+        position: relative;
+        display: block;
+        top: 30px;
+    }
+
+    .hamburger-menu-clicked nav ul li a {
+        font-size: 17px;
+        height: 45px;
+        letter-spacing: 1px;
+        color: white;
+    }
+
+    .hamburger-menu-clicked .bi-list::before {
+        color: white;
+        font-size: 38px;
+        content: "\f62a";
+    }
+
+    .container-all {
+        padding-right: var(--aside-width-closed);
+    }
+    
+    #main-home-container > div {
+        top: 0.3vh;
+        right: -3vw;
+    }
+
+    h1 {
+        font-size: 53px;
+        line-height: 62px;
+        margin-bottom: 4vh;
+    }
+ 
+    .menystangd #close-cv-btn .bi-phone {
+        opacity: 1;
+        transition: opacity 500ms;
+    }
+
+    #headline-merits {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .merits-popup-container {
+        padding: 40px;
+    }
+
+    #main-portfolio {
+        padding: 12vh 5.1vw;
+    }
+
+    #portfolio-objects-container {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4.7%;
+    }
+
+    .portfolio-object-popup-content {
+        padding: 60px 40px;
+    }
+
+    .portfolio-object-popup-content,
+    .merits-popup-container {
+        width: 91vw;
+    }
+
+    .arrow-left-portfolio-object,
+    .arrow-right-portfolio-object {
+        display: none;
+}
+
+  }
+
+
+@media screen and (max-width: 550px) {
+
+
+    #main-portfolio {
+        padding: 12vh 5.5vw;
+    }
+
+    #portfolio-objects-container {
+        grid-template-columns: 1fr;
+        row-gap: 8.5vh;
+    }
+
+    .portfolio-object-popup-content {
+        height: 68vh;
+        padding: 60px 25px;
+    }
+
+    .portfolio-object-popup-content .bi-x-lg {
+        top: calc(16vh + 15px);
+    }
+
+  }
+
+
